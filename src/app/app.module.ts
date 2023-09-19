@@ -7,6 +7,8 @@ import { NavBarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+
+import { ProductComponent } from './components/product/product.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ContactComponent } from './components/contact/contact.component';
 
@@ -17,6 +19,7 @@ import { ContactComponent } from './components/contact/contact.component';
     FooterComponent,
     CatalogComponent,
     SidebarComponent,
+    ProductComponent
     ProductsComponent,
     ContactComponent,
   ],
