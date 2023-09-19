@@ -8,7 +8,6 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProductsComponent } from './components/products/products.component';
-import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
@@ -19,12 +18,11 @@ import { ContactComponent } from './components/contact/contact.component';
     CatalogComponent,
     SidebarComponent,
     ProductsComponent,
-    ShoppingCartComponent,
-    ContactComponent
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
