@@ -9,8 +9,8 @@ import { CatalogComponent } from './components/catalog/catalog.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 import { ProductComponent } from './components/product/product.component';
-import { ProductsComponent } from './components/products/products.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { StatusBarComponent } from './components/shopping-cart/status-bar/status-bar.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +19,7 @@ import { ContactComponent } from './components/contact/contact.component';
     FooterComponent,
     CatalogComponent,
     SidebarComponent,
-    ProductComponent
-    ProductsComponent,
+    ProductComponent,
     ContactComponent,
   ],
   imports: [
