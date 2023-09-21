@@ -7,9 +7,10 @@ import { Component } from '@angular/core';
   ]
 })
 export class CheckoutComponent {
+
   datosEnvio: any = {
     cidudad: 'mexico',
-    
+
   }; // Objeto para almacenar los datos de envío
 
   submitForm() {

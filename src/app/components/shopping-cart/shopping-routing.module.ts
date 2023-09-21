@@ -3,11 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ShoppingCartComponent } from './cart/shopping-cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { PaymentComponent } from './payment/payment.component';
+import { confirmComponent } from './confirm/confirm.component';
 
 const routes: Routes = [
   { path: 'checkout', component: CheckoutComponent },
-  { path: 'payment', component: PaymentComponent },
+  { path: 'confirm', component: confirmComponent },
   { path: 'shoppingCart', component: ShoppingCartComponent }
 ];
 
