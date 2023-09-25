@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ShoppingCartComponent } from './cart/shopping-cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { PaymentComponent } from './payment/payment.component';
+import { confirmComponent } from './confirm/confirm.component';
 import { CartRoutingModule } from './shopping-routing.module';
 import { StatusBarComponent } from './status-bar/status-bar.component';
 
@@ -11,7 +11,7 @@ import { StatusBarComponent } from './status-bar/status-bar.component';
   declarations: [
     ShoppingCartComponent,
     CheckoutComponent,
-    PaymentComponent,
+    confirmComponent,
     StatusBarComponent,
   ],
   imports: [

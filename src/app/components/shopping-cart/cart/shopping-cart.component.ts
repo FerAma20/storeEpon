@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StatusBarService } from '../status-bar.service';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -8,5 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingCartComponent {
 
+  }
 
-}
+
+
