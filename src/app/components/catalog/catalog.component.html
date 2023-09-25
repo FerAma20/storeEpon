@@ -28,18 +28,17 @@
             class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#549675] rounded-lg hover:bg-[#0b5539] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Ver mas informacion
 
-            <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-              viewBox="0 0 19 20">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"
-                d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm1-4H5m0 0L3 4m0 0h5.501M3 4l-.792-3H1m11 3h6m-3 3V1" />
+            <svg class="w-3.5 h-3.5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+              <path fill="currentColor"
+                d="M368 208H216V56c0-13.3-10.7-24-24-24s-24 10.7-24 24v152H16c-13.3 0-24 10.7-24 24s10.7 24 24 24h152v152c0 13.3 10.7 24 24 24s24-10.7 24-24V280h152c13.3 0 24-10.7 24-24s-10.7-24-24-24z">
+              </path>
             </svg>
           </a>
         </div>
       </div>
       <div
         class="w-80 bg-white hover:border hover:drop-shadow-lg dark:bg-gray-800 dark:border-gray-700 flex flex-wrap justify-center p-2">
-        <a href="#" class="text-center" data-modal-target="authentication-modal"
-          data-modal-toggle="authentication-modal">
+        <a routerLink="product" class="text-center" >
           <h5 class="mb-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
             Noteworthy technology acquisitions 2021
           </h5>
@@ -59,10 +58,10 @@
             class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#549675] rounded-lg hover:bg-[#0b5539] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Ver mas informacion
 
-            <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-              viewBox="0 0 19 20">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"
-                d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm1-4H5m0 0L3 4m0 0h5.501M3 4l-.792-3H1m11 3h6m-3 3V1" />
+            <svg class="w-3.5 h-3.5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+              <path fill="currentColor"
+                d="M368 208H216V56c0-13.3-10.7-24-24-24s-24 10.7-24 24v152H16c-13.3 0-24 10.7-24 24s10.7 24 24 24h152v152c0 13.3 10.7 24 24 24s24-10.7 24-24V280h152c13.3 0 24-10.7 24-24s-10.7-24-24-24z">
+              </path>
             </svg>
 
           </a>
@@ -77,19 +76,18 @@
           </h5>
         </a>
         <a routerLink="product">
-          <img class="h-80" src="../../../assets/demo.jpg" alt="" data-modal-target="authentication-modal"
-            data-modal-toggle="authentication-modal" />
+          <img class="h-80" src="../../../assets/demo.jpg" alt=""/>
         </a>
-        <div class="p-5" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal">
+        <div class="p-5">
           <div class="flex flex-wrap justify-center">
             <p class="mb-3 font-normal text-[#0b5539] dark:text-gray-400">
-              Q 1,500.00
+              Q {{prod.epp_mount | number: '1.2-2'}}
             </p>
           </div>
 
-          <a routerLink="product"
+          <a href="#"
             class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#549675] rounded-lg hover:bg-[#0b5539] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Ver mas informacion
+            Agregar al carrito
 
             <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
               viewBox="0 0 19 20">
@@ -123,10 +121,10 @@
             class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#549675] rounded-lg hover:bg-[#0b5539] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Ver mas informacion
 
-            <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-              viewBox="0 0 19 20">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"
-                d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm1-4H5m0 0L3 4m0 0h5.501M3 4l-.792-3H1m11 3h6m-3 3V1" />
+            <svg class="w-3.5 h-3.5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+              <path fill="currentColor"
+                d="M368 208H216V56c0-13.3-10.7-24-24-24s-24 10.7-24 24v152H16c-13.3 0-24 10.7-24 24s10.7 24 24 24h152v152c0 13.3 10.7 24 24 24s24-10.7 24-24V280h152c13.3 0 24-10.7 24-24s-10.7-24-24-24z">
+              </path>
             </svg>
           </a>
         </div>
@@ -157,10 +155,10 @@
             class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#549675] rounded-lg hover:bg-[#0b5539] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Ver mas informacion
 
-            <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-              viewBox="0 0 19 20">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"
-                d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm1-4H5m0 0L3 4m0 0h5.501M3 4l-.792-3H1m11 3h6m-3 3V1" />
+            <svg class="w-3.5 h-3.5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+              <path fill="currentColor"
+                d="M368 208H216V56c0-13.3-10.7-24-24-24s-24 10.7-24 24v152H16c-13.3 0-24 10.7-24 24s10.7 24 24 24h152v152c0 13.3 10.7 24 24 24s24-10.7 24-24V280h152c13.3 0 24-10.7 24-24s-10.7-24-24-24z">
+              </path>
             </svg>
           </a>
         </div>
@@ -168,4 +166,6 @@
     </div>
   </div>
 </div>
+
+
 
