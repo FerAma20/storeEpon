@@ -7,7 +7,7 @@ import { CartRoutingModule } from './components/shopping-cart/shopping-routing.m
 
 const routes: Routes = [
 
-  {path: 'product',component: CatalogComponent},
+  {path: 'product',component: ProductComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'shoppingCart', loadChildren: () => import('./components/shopping-cart/shopping-cart.module').then(m => m.ShoppingCartModule) },
   {path: '**', component: CatalogComponent},
