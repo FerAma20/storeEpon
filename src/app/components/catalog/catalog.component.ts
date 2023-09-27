@@ -1,12 +1,20 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { initFlowbite } from 'flowbite';
+import { shoppingCartService } from '../shopping-cart/shopping-cart.service';
 
 @Component({
   selector: 'catalog-component',
   templateUrl: './catalog.component.html'
 })
 export class CatalogComponent implements OnInit {
+
+  constructor(
+    public shoppingCartService: shoppingCartService
+    ){}
+
+
+
   title = 'web-app';
   data: any;
   ngOnInit(): void {
@@ -19,4 +27,6 @@ export class CatalogComponent implements OnInit {
       .then((response) => response.json())
       .then((quotesData) => (this.data = quotesData));
   }
+
+
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { shoppingCartService } from '../shopping-cart.service';
 
 @Component({
   selector: 'app-payment',
@@ -11,13 +12,12 @@ export class confirmComponent {
   confirmado: boolean = false; // Propiedad para controlar el estado del botón
 
   submitForm() {
-    // Aquí puedes realizar la lógica para procesar el pago según el método seleccionado
     console.log('Método de pago seleccionado:', this.metodoSeleccionado);
-    // Puedes agregar más lógica de procesamiento de pago aquí
-
-    // Cambia el estado de confirmado a true
     this.confirmado = true;
   }
 
+  constructor(public shoppingCartService: shoppingCartService) { }
+
+  metodoPago: string = "Visa Cuotas";
 }
 

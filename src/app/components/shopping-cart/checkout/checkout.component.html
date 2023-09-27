@@ -1,85 +1,57 @@
-<div class="h-20 p-4 flex justify-center items-center">
-  <div class="w-full max-w-xl justify-between items-center">
-    <!-- Envuelve tu contenido en un div adicional -->
-    <app-status-bar></app-status-bar>
-  </div>
-</div>
-
-<h1 class="text-center text-xl font-semibold">Registro de Datos de Envío</h1>
-<form (ngSubmit)="submitForm()" class="flex flex-wrap">
-  <!-- Columna 1 -->
-  <div class="w-full md:w-1/2 p-2">
-    <!-- Nombres -->
-    <div class="mb-4">
-      <label for="nombres">Nombres:</label>
-      <input type="text" id="nombres" name="nombres" required class="w-full p-2 border rounded-md" />
-    </div>
-
-    <!-- Apellidos -->
-    <div class="mb-4">
-      <label for="apellidos">Apellidos:</label>
-      <input type="text" id="apellidos" name="apellidos" required class="w-full p-2 border rounded-md" />
+<div class="container pb-8">
+  <div class="h-20 p-4 flex justify-center items-center">
+    <div class="w-full max-w-xl justify-between items-center">
+      <!-- Envuelve tu contenido en un div adicional -->
+      <app-status-bar></app-status-bar>
     </div>
   </div>
 
-  <!-- Columna 2 -->
-  <div class="w-full md:w-1/2 p-2">
-    <!-- Departamento -->
-    <div class="mb-4">
-      <label for="departamento">Departamento:</label>
-      <select id="departamento" name="departamento" class="w-full p-2 border rounded-md" required>
-        <option value="" disabled selected>Selecciona un departamento</option>
-        <option value="Alta Verapaz">Alta Verapaz</option>
-        <option value="Baja Verapaz">Baja Verapaz</option>
-        <option value="Chimaltenango">Chimaltenango</option>
-        <!-- Agregar más opciones de departamentos aquí -->
-      </select>
-    </div>
+    <h1 class="text-center text-xl font-semibold">
+      Datos de Envío
+    </h1>
 
-    <!-- Municipio -->
-    <div class="mb-4">
-      <label for="departamento">Municipio:</label>
-      <select id="departamento" name="departamento" class="w-full p-2 border rounded-md" required>
-        <option value="" disabled selected>Selecciona tu Municipio</option>
-        <option value="Alta Verapaz">Jutiapa</option>
-        <option value="Baja Verapaz">Asuncion Mita</option>
-        <option value="Chimaltenango">Quezada</option>
-        <!-- Agregar más opciones de departamentos aquí -->
-      </select>
-    </div>
-  </div>
+  <div class="bg-white w-full h-full flex flex-col md:flex-row justify-around">
+    <div class="flex flex-wrap">
+      <!-- Columna 1 - Nombres y Apellidos -->
+      <div class="w-full md:w-1/2 p-2">
+        <div class="mb-4">
+          <label for="nombres">Nombres:</label>
+          <input type="text" id="nombres" name="nombres" required class="w-full p-2 border rounded-md smaller-input" />
+        </div>
 
-  <!-- Columna 3 -->
-  <div class="flex flex-wrap w-full">
-    <div class="w-full md:w-1/2 p-2">
-      <!-- Dirección -->
-      <div class="mb-4">
-        <label for="direccion">Dirección:</label>
-        <textarea id="direccion" name="direccion" rows="1" class="w-full p-2 border rounded-md" required></textarea>
+        <div class="mb-4">
+          <label for="apellidos">Apellidos:</label>
+          <input type="text" id="apellidos" name="apellidos" required
+            class="w-full p-2 border rounded-md smaller-input" />
+        </div>
       </div>
-    </div>
 
-    <div class="w-full md:w-1/2 p-2">
-      <div class="mb-4">
-        <label for="metodoPago">Selecciona un método de pago:</label>
-        <select id="metodoPago" name="metodoPago" class="w-full p-2 border rounded-md" required>
-          <option value="" disabled>Selecciona un método</option>
-          <option value="paypal">Pago contra entrega</option>
-          <option value="paypal">Visacuotas</option>
-          <option value="tarjeta">Tarjeta de crédito</option>
-          <option value="transferencia">Transferencia bancaria</option>
-          <!-- Agregar más opciones de métodos de pago aquí -->
-        </select>
+      <!-- Columna 2 - Dirección y Método de Pago -->
+      <div class="w-full md:w-1/2 p-2">
+        <div class="mb-4">
+          <label for="metodoPago">Selecciona un método de pago:</label>
+          <select id="metodoPago" name="metodoPago" class="w-full p-2 border rounded-md smaller-input" required>
+            <option value="" disabled>Selecciona un método</option>
+            <option value="paypal">Pago contra entrega</option>
+            <option value="paypal">Visacuotas</option>
+            <option value="tarjeta">Tarjeta de crédito</option>
+            <option value="transferencia">Transferencia bancaria</option>
+            <!-- Agregar más opciones de métodos de pago aquí -->
+          </select>
+        </div>
+        <div class="mb-4">
+          <label for="direccion">Dirección:</label>
+          <textarea id="direccion" name="direccion" rows="1" class="w-full p-2 border rounded-md smaller-input"
+            required></textarea>
+        </div>
       </div>
     </div>
   </div>
-
-
   <!-- Botón de envío -->
   <div class="w-full p-2 text-center">
-    <button routerLink="/confirm" type="submit"
+    <button routerLink="/confirm" type="submit" (click)="shoppingCartService.addStep()"
       class="bg-[#549675] rounded-md hover:bg-[#0b5539] border border-transparent text-white p-2">
       Confirmar mi pedido
     </button>
   </div>
-</form>
+</div>

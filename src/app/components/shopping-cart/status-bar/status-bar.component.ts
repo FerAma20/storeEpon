@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StatusBarService } from '../status-bar.service';
+import { shoppingCartService } from '../shopping-cart.service';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
@@ -10,6 +10,9 @@ import { BehaviorSubject } from 'rxjs';
   ]
 })
 export class StatusBarComponent {
+  constructor(private shoppingCartService: shoppingCartService) { }
+
+  pasoActual: any = this.shoppingCartService.pasoActual;
 
 }
 

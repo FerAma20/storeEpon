@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {  shoppingCartService } from '../shopping-cart.service';
 
 @Component({
   selector: 'app-checkout',
@@ -17,4 +18,7 @@ export class CheckoutComponent {
     // Aquí puedes enviar los datos de envío al servidor o realizar otras acciones según tus necesidades.
     console.log(this.datosEnvio);
   }
+
+  constructor(public shoppingCartService: shoppingCartService) { }
+
 }

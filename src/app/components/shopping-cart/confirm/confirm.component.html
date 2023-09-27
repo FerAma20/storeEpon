@@ -1,14 +1,69 @@
-<p>Aqui aparecera la informacion para que se revise y confirmar la compra</p>
 
-<div class="text-center p-4">
-  <button type="submit" class="bg-[#549675] rounded-md hover:bg-[#0b5539] border border-transparent text-white p-2"
-          (click)="submitForm()">
-          Enviar pedido
-  </button>
+<div class="container pb-8 ">
+  <div class="h-20 p-4 flex justify-center items-center">
+    <div class="w-full max-w-xl justify-between items-center">
+      <!-- Envuelve tu contenido en un div adicional -->
+      <app-status-bar></app-status-bar>
+    </div>
+  </div>
 
+<!-- Componente de Revisión del Pedido -->
+
+<div class=" p-4">
+  <h1 class="text-2xl font-semibold mb-4">Revisión del Pedido</h1>
+
+  <!-- Lista de elementos del pedido -->
+  <div class="bg-white shadow-md rounded-lg p-4">
+    <!-- Producto 1 -->
+    <div class="flex flex-col lg:flex-row justify-between items-center mb-2">
+      <h2 class="text-lg font-semibold">Producto 1</h2>
+      <span class="text-gray-600 lg:ml-2">Cantidad: 2</span>
+    </div>
+  </div>
+
+  <!-- Producto 2 -->
+  <div class="bg-white shadow-md rounded-lg p-4 mt-4">
+    <div class="flex flex-col lg:flex-row justify-between items-center mb-2">
+      <h2 class="text-lg font-semibold">Producto 2</h2>
+      <span class="text-gray-600 lg:ml-2">Cantidad: 1</span>
+    </div>
+  </div>
+
+  <!-- Resumen del Pedido -->
+  <div class="mt-6">
+    <div class="bg-white shadow-md rounded-lg p-4 mt-4">
+      <div class="flex justify-between items-center border-t border-gray-300 pt-2">
+        <span class="font-semibold">Total</span>
+        <span class="font-semibold">Q 35.00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Información de Método de Pago (Visa Cuotas) -->
+  <div class="mt-6" *ngIf="metodoPago === 'Visa Cuotas'">
+    <h2 class="text-xl font-semibold">Información de Pago</h2>
+    <div class="bg-white shadow-md rounded-lg p-4 mt-4">
+      <p class="text-gray-600">Método de Pago: Visa Cuotas</p>
+      <p class="text-gray-600">Número de Cuotas: 12</p>
+      <p class="text-gray-600">Monto de Cuota Mensual: Q 3.00</p>
+    </div>
+  </div>
+
+  <!-- Dirección de Envío -->
+  <div class="mt-6">
+    <h2 class="text-xl font-semibold">Dirección de Envío</h2>
+    <div class="bg-white shadow-md rounded-lg p-4 mt-4">
+      <p class="text-gray-600">Nombre: John Doe</p>
+      <p class="text-gray-600">Dirección: 123 Calle Principal</p>
+    </div>
+  </div>
+  </div>
+
+  <div class="text-center mt-6 p-4">
+    <button type="submit" class="bg-[#549675] rounded-md hover:bg-[#0b5539] border border-transparent text-white px-4 py-2"
+            (click)="submitForm(); shoppingCartService.resetStautsBar()">
+            Enviar Pedido
+    </button>
+  </div>
 </div>
-
-
-
-
 

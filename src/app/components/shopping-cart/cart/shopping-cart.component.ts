@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StatusBarService } from '../status-bar.service';
+import { shoppingCartService } from '../shopping-cart.service';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -8,6 +8,11 @@ import { StatusBarService } from '../status-bar.service';
   ]
 })
 export class ShoppingCartComponent {
+
+  constructor(public shoppingCartService: shoppingCartService) { }
+
+  items = this.shoppingCartService.getItems();
+
 
   }
 

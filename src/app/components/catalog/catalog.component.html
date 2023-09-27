@@ -5,74 +5,14 @@
 
   <div class="mx-auto w-full">
     <div class="flex flex-wrap gap-3 justify-center p-5">
-      <div
-        class="w-80 bg-white hover:border hover:drop-shadow-lg dark:bg-gray-800 dark:border-gray-700 flex flex-wrap justify-center p-2">
-        <a href="#" class="text-center" data-modal-target="authentication-modal"
-          data-modal-toggle="authentication-modal">
-          <h5 class="mb-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Noteworthy technology acquisitions 2021
-          </h5>
-        </a>
-        <a  routerLink="product" >
-          <img class="h-80" src="../../../assets/demo.jpg" alt="" data-modal-target="authentication-modal"
-            data-modal-toggle="authentication-modal" />
-        </a>
-        <div class="p-5" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal">
-          <div class="flex flex-wrap justify-center">
-            <p class="mb-3 font-normal text-[#0b5539] dark:text-gray-400">
-              Q 1,500.00
-            </p>
-          </div>
 
-          <a  routerLink="product"
-            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#549675] rounded-lg hover:bg-[#0b5539] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Ver mas informacion
+      <!--Inicia card-->
 
-            <svg class="w-3.5 h-3.5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-              <path fill="currentColor"
-                d="M368 208H216V56c0-13.3-10.7-24-24-24s-24 10.7-24 24v152H16c-13.3 0-24 10.7-24 24s10.7 24 24 24h152v152c0 13.3 10.7 24 24 24s24-10.7 24-24V280h152c13.3 0 24-10.7 24-24s-10.7-24-24-24z">
-              </path>
-            </svg>
-          </a>
-        </div>
-      </div>
-      <div
+      <div *ngFor="let prod of data"
         class="w-80 bg-white hover:border hover:drop-shadow-lg dark:bg-gray-800 dark:border-gray-700 flex flex-wrap justify-center p-2">
         <a routerLink="product" class="text-center" >
           <h5 class="mb-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Noteworthy technology acquisitions 2021
-          </h5>
-        </a>
-        <a  routerLink="product">
-          <img class="h-80" src="../../../assets/demo.jpg" alt="" data-modal-target="authentication-modal"
-            data-modal-toggle="authentication-modal" />
-        </a>
-        <div class="p-5" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal">
-          <div class="flex flex-wrap justify-center">
-            <p class="mb-3 font-normal text-[#0b5539] dark:text-gray-400">
-              Q 1,500.00
-            </p>
-          </div>
-
-          <a routerLink="product"
-            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#549675] rounded-lg hover:bg-[#0b5539] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Ver mas informacion
-
-            <svg class="w-3.5 h-3.5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-              <path fill="currentColor"
-                d="M368 208H216V56c0-13.3-10.7-24-24-24s-24 10.7-24 24v152H16c-13.3 0-24 10.7-24 24s10.7 24 24 24h152v152c0 13.3 10.7 24 24 24s24-10.7 24-24V280h152c13.3 0 24-10.7 24-24s-10.7-24-24-24z">
-              </path>
-            </svg>
-
-          </a>
-        </div>
-      </div>
-      <div
-        class="w-80 bg-white hover:border hover:drop-shadow-lg dark:bg-gray-800 dark:border-gray-700 flex flex-wrap justify-center p-2">
-        <a href="#" class="text-center" data-modal-target="authentication-modal"
-          data-modal-toggle="authentication-modal">
-          <h5 class="mb-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Noteworthy technology acquisitions 2021
+            {{prod.epp_name}}
           </h5>
         </a>
         <a routerLink="product">
@@ -85,7 +25,7 @@
             </p>
           </div>
 
-          <a href="#"
+          <a href="#"  (click)="shoppingCartService.addShoppingCart(prod)"
             class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#549675] rounded-lg hover:bg-[#0b5539] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Agregar al carrito
 
@@ -98,71 +38,8 @@
         </div>
       </div>
 
-      <div
-        class="w-80 bg-white hover:border hover:drop-shadow-lg dark:bg-gray-800 dark:border-gray-700 flex flex-wrap justify-center p-2">
-        <a href="#" class="text-center" data-modal-target="authentication-modal"
-          data-modal-toggle="authentication-modal">
-          <h5 class="mb-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Noteworthy technology acquisitions 2021
-          </h5>
-        </a>
-        <a  routerLink="product">
-          <img class="h-80" src="../../../assets/demo.jpg" alt="" data-modal-target="authentication-modal"
-            data-modal-toggle="authentication-modal" />
-        </a>
-        <div class="p-5" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal">
-          <div class="flex flex-wrap justify-center">
-            <p class="mb-3 font-normal text-[#0b5539] dark:text-gray-400">
-              Q 1,500.00
-            </p>
-          </div>
+      <!--Inicia card-->
 
-          <a routerLink="product"
-            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#549675] rounded-lg hover:bg-[#0b5539] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Ver mas informacion
-
-            <svg class="w-3.5 h-3.5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-              <path fill="currentColor"
-                d="M368 208H216V56c0-13.3-10.7-24-24-24s-24 10.7-24 24v152H16c-13.3 0-24 10.7-24 24s10.7 24 24 24h152v152c0 13.3 10.7 24 24 24s24-10.7 24-24V280h152c13.3 0 24-10.7 24-24s-10.7-24-24-24z">
-              </path>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-
-      <div
-        class="w-80 bg-white hover:border hover:drop-shadow-lg dark:bg-gray-800 dark:border-gray-700 flex flex-wrap justify-center p-2">
-        <a href="#" class="text-center" data-modal-target="authentication-modal"
-          data-modal-toggle="authentication-modal">
-          <h5 class="mb-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Noteworthy technology acquisitions 2021
-          </h5>
-        </a>
-        <a href="#" routerLink="product">
-          <img class="h-80" src="../../../assets/demo.jpg" alt="" data-modal-target="authentication-modal"
-            data-modal-toggle="authentication-modal" />
-        </a>
-
-        <div class="p-5" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal">
-          <div class="flex flex-wrap justify-center">
-            <p class="mb-3 font-normal text-[#0b5539] dark:text-gray-400">
-              Q 1,500.00
-            </p>
-          </div>
-
-          <a href="#" routerLink="product"
-            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#549675] rounded-lg hover:bg-[#0b5539] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Ver mas informacion
-
-            <svg class="w-3.5 h-3.5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-              <path fill="currentColor"
-                d="M368 208H216V56c0-13.3-10.7-24-24-24s-24 10.7-24 24v152H16c-13.3 0-24 10.7-24 24s10.7 24 24 24h152v152c0 13.3 10.7 24 24 24s24-10.7 24-24V280h152c13.3 0 24-10.7 24-24s-10.7-24-24-24z">
-              </path>
-            </svg>
-          </a>
-        </div>
-      </div>
     </div>
   </div>
 </div>
