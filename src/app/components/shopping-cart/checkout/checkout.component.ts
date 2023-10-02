@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import {  shoppingCartService } from '../shopping-cart.service';
 
 @Component({
@@ -8,6 +8,9 @@ import {  shoppingCartService } from '../shopping-cart.service';
   ]
 })
 export class CheckoutComponent {
+
+  @Output()
+  onNewStateCheck : EventEmitter<number> = new EventEmitter;
 
   datosEnvio: any = {
     cidudad: 'mexico',
@@ -21,4 +24,7 @@ export class CheckoutComponent {
 
   constructor(public shoppingCartService: shoppingCartService) { }
 
+  setNewStateCheck = (state: number) =>{
+    this.onNewStateCheck.emit(state);
+  }
 }

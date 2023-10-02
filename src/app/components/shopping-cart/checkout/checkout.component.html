@@ -1,10 +1,4 @@
-<div class="container pb-8">
-  <div class="h-20 p-4 flex justify-center items-center">
-    <div class="w-full max-w-xl justify-between items-center">
-      <!-- Envuelve tu contenido en un div adicional -->
-      <app-status-bar></app-status-bar>
-    </div>
-  </div>
+<div class="container pb-8 drop-shadow-md">
 
     <h1 class="text-center text-xl font-semibold">
       Datos de Envío
@@ -49,8 +43,7 @@
   </div>
   <!-- Botón de envío -->
   <div class="w-full p-2 text-center">
-    <button routerLink="/confirm" type="submit" (click)="shoppingCartService.addStep()"
-      class="bg-[#549675] rounded-md hover:bg-[#0b5539] border border-transparent text-white p-2">
+    <button  (click)="setNewStateCheck(3)" class="bg-[#549675] rounded-md hover:bg-[#0b5539] border border-transparent text-white p-2">
       Confirmar mi pedido
     </button>
   </div>
