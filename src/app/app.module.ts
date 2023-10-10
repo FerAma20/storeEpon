@@ -7,7 +7,10 @@ import { NavBarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+
 import { ProductComponent } from './components/product/product.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { StatusBarComponent } from './components/shopping-cart/status-bar/status-bar.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,12 @@ import { ProductComponent } from './components/product/product.component';
     FooterComponent,
     CatalogComponent,
     SidebarComponent,
-    ProductComponent
+    ProductComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

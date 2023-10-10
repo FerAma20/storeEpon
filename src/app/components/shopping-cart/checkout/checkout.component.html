@@ -1,0 +1,50 @@
+<div class="container pb-8 drop-shadow-md">
+
+    <h1 class="text-center text-xl font-semibold">
+      Datos de Envío
+    </h1>
+
+  <div class="bg-white w-full h-full flex flex-col md:flex-row justify-around">
+    <div class="flex flex-wrap">
+      <!-- Columna 1 - Nombres y Apellidos -->
+      <div class="w-full md:w-1/2 p-2">
+        <div class="mb-4">
+          <label for="nombres">Nombres:</label>
+          <input type="text" $id="nombres" name="nombres" required class="w-full p-2 border rounded-md smaller-input" />
+        </div>
+
+        <div class="mb-4">
+          <label for="apellidos">Apellidos:</label>
+          <input type="text" $id="apellidos" name="apellidos" required
+            class="w-full p-2 border rounded-md smaller-input" />
+        </div>
+      </div>
+
+      <!-- Columna 2 - Dirección y Método de Pago -->
+      <div class="w-full md:w-1/2 p-2">
+        <div class="mb-4">
+          <label for="metodoPago">Selecciona un método de pago:</label>
+          <select $id="metodoPago" name="metodoPago" class="w-full p-2 border rounded-md smaller-input" required>
+            <option value="" disabled>Selecciona un método</option>
+            <option value="paypal">Pago contra entrega</option>
+            <option value="paypal">Visacuotas</option>
+            <option value="tarjeta">Tarjeta de crédito</option>
+            <option value="transferencia">Transferencia bancaria</option>
+            <!-- Agregar más opciones de métodos de pago aquí -->
+          </select>
+        </div>
+        <div class="mb-4">
+          <label for="direccion">Dirección:</label>
+          <textarea $id="direccion" name="direccion" rows="1" class="w-full p-2 border rounded-md smaller-input"
+            required></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Botón de envío -->
+  <div class="w-full p-2 text-center">
+    <button  (click)="setNewStateCheck(3)" class="bg-[#549675] rounded-md hover:bg-[#0b5539] border border-transparent text-white p-2">
+      Confirmar mi pedido
+    </button>
+  </div>
+</div>

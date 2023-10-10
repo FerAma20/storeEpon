@@ -1,0 +1,14 @@
+<div class="h-20 p-4 flex justify-center items-center">
+  <div class="w-full max-w-xl justify-between items-center">
+    <!-- Envuelve tu contenido en un div adicional -->
+    <app-status-bar></app-status-bar>
+  </div>
+</div>
+
+<product-list-app (onNewState)="setNewState($event)" *ngIf="statusCart == 1"/>
+<div class="translate-x-6" *ngIf="statusCart == 2">
+  <app-checkout (onNewStateCheck)="setNewState($event)" />
+</div>
+
+<app-payment *ngIf="statusCart == 3" />
+
