@@ -10,12 +10,12 @@
       <div class="w-full md:w-1/2 p-2">
         <div class="mb-4">
           <label for="nombres">Nombres:</label>
-          <input type="text" id="nombres" name="nombres" required class="w-full p-2 border rounded-md smaller-input" />
+          <input type="text" $id="nombres" name="nombres" required class="w-full p-2 border rounded-md smaller-input" />
         </div>
 
         <div class="mb-4">
           <label for="apellidos">Apellidos:</label>
-          <input type="text" id="apellidos" name="apellidos" required
+          <input type="text" $id="apellidos" name="apellidos" required
             class="w-full p-2 border rounded-md smaller-input" />
         </div>
       </div>
@@ -24,7 +24,7 @@
       <div class="w-full md:w-1/2 p-2">
         <div class="mb-4">
           <label for="metodoPago">Selecciona un método de pago:</label>
-          <select id="metodoPago" name="metodoPago" class="w-full p-2 border rounded-md smaller-input" required>
+          <select $id="metodoPago" name="metodoPago" class="w-full p-2 border rounded-md smaller-input" required>
             <option value="" disabled>Selecciona un método</option>
             <option value="paypal">Pago contra entrega</option>
             <option value="paypal">Visacuotas</option>
@@ -35,7 +35,7 @@
         </div>
         <div class="mb-4">
           <label for="direccion">Dirección:</label>
-          <textarea id="direccion" name="direccion" rows="1" class="w-full p-2 border rounded-md smaller-input"
+          <textarea $id="direccion" name="direccion" rows="1" class="w-full p-2 border rounded-md smaller-input"
             required></textarea>
         </div>
       </div>
