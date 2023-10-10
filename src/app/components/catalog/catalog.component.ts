@@ -23,7 +23,7 @@ export class CatalogComponent implements OnInit {
   }
 
   getProducts = () =>{
-    fetch('https://wcl2kt86-4208.use2.devtunnels.ms/epon/readAllProducts')
+    fetch('http://18.224.93.52:4208/epon/readAllProducts')
       .then((response) => response.json())
       .then((quotesData) => (this.data = quotesData));
   }
